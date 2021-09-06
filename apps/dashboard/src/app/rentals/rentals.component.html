@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="col-50" layout="row" layout-align="center center">
+      <rental-mgr-rental-list
+        [rentals]="allRentals$ | async"
+        (selected)="selectRental($event)"
+        (deleted)="deleteRental($event)"
+        (rentalViewed)="viewRental($event)"
+      ></rental-mgr-rental-list>
+    </div>
+    <div class="col-50" layout="row" layout-align="center center">
+      <rental-mgr-rental-details
+        [rental]="selectedRental$ | async"
+        (saved)="saveRental($event)"
+        (cancelled)="resetRental()"
+        [form]="form"
+      ></rental-mgr-rental-details>
+    </div>
+  </div>

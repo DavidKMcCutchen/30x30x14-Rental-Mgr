@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Rentals</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let rental of rentals" data-test="rental-list-item" (click)="selected.emit(rental)">
+        <h3 matLine>{{rental.name}}</h3>
+        <p matLine> Address: {{rental.address}}</p>
+        <p matLine> Rental Income: {{rental.rentalIncome}}</p>
+        <p matLine> Financing: {{rental.financed}}</p>
+
+        <button mat-icon-button (click)="rentalViewed.emit(rental.id); $event.stopImmediatePropagation()">
+          <mat-icon *ngIf="!readonly">chevron_left</mat-icon>
+        </button>
+
+
+        <button mat-icon-button (click)="deleted.emit(rental); $event.stopImmediatePropagation()">
+          <mat-icon *ngIf="!readonly">delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

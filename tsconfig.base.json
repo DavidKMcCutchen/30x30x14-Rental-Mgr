@@ -13,9 +13,17 @@
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false,
     "baseUrl": ".",
     "paths": {
-      "@rental-mgr/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@rental-mgr/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@rental-mgr/core-data": ["libs/core-data/src/index.ts"],
+      "@rental-mgr/core-state": ["libs/core-state/src/index.ts"],
+      "@rental-mgr/environment": ["libs/environment/src/index.ts"],
+      "@rental-mgr/material": ["libs/material/src/index.ts"],
+      "@rental-mgr/theme": ["libs/theme/src/index.ts"],
+      "@rental-mgr/ui-login": ["libs/ui-login/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

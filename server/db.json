@@ -1,0 +1,11 @@
+{
+  "rentals": [
+    {
+      "id": 1,
+      "name": "Drug House",
+      "address": "1234 Not Nice Part of Town Road",
+      "rentalIncome": "$179.99",
+      "financed": false
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+
+<div class="container">
+  <div class="col-50" layout="row" layout-align="center center">
+<div *ngIf="currentRental$ | async as rental">
+  <rental-mgr-rental-info [rental]="currentRental$ | async"></rental-mgr-rental-info>
+</div>
+</div>
+</div>
